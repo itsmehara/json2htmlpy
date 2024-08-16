@@ -1,6 +1,7 @@
 import json
 import sys
 
+
 def json_to_html_table(data):
     if isinstance(data, dict):
         # Start a new table for a dictionary
@@ -28,34 +29,42 @@ def json_to_html_table(data):
         html = str(data)
     return html
 
+
 def convert_json_to_html(json_input, output_file):
     # Convert JSON data to an HTML table
     html_table = json_to_html_table(json_input)
-    
-    # Wrap the table in basic HTML structure
-    html_content = f'''
-    <html>
-    <head><title>JSON to HTML</title></head>
+
+    # Add the CSS for styling the table
+    css_style = '''
     <style>
     table, th, td {
       border: 1px solid black;
       border-collapse: collapse;
     }
-    </style>    
+    </style>
+    '''
+
+    # Wrap the table in basic HTML structure including the CSS style
+    html_content = f'''
+    <html>
+    <head><title>JSON to HTML</title>
+    {css_style}
+    </head>
     <body>
     {html_table}
     </body>
     </html>
     '''
-    
+
     # Write to an HTML file
     with open(output_file, 'w') as file:
         file.write(html_content)
 
+
 if __name__ == "__main__":
     # Check if the correct number of arguments are passed
     if len(sys.argv) != 3:
-        print("Usage: python json_to_html.py <input_json_file> <output_html_file>")
+        print("Usage: python jsontohtml.py <input_json_file> <output_html_file>")
         sys.exit(1)
 
     # Get the input and output file paths from command line arguments
