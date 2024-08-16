@@ -11,11 +11,16 @@ This Python project provides a script to convert a nested JSON structure into an
 ## Project Structure
 
 ```
-.
-├── jsontohtml.py    # Main script to convert JSON to HTML
-├── sample.json      # Sample JSON file for testing
-├── output.html      # Example of the generated HTML file
-└── README.md        # Documentation file
+json2htmlpy/                # Root of the repository
+├── json2htmlpy/            # Package directory (same name as the package)
+│   ├── __init__.py         # Makes it a package; can be empty or contain initialization code
+│   ├── jsontohtml.py       # Main Python script
+├── setup.py                # Setup script for packaging
+├── README.md               # Project’s README
+├── LICENSE                 # License for the package
+└── .github/
+    └── workflows/
+        └── python-publish.yml  # GitHub Actions workflow
 ```
 
 ## Getting Started
@@ -43,7 +48,7 @@ This Python project provides a script to convert a nested JSON structure into an
 
 ### Usage
 
-1. **Place Your JSON File**
+1. **Place the JSON File**
    - Place the JSON file you wish to convert into the project directory or provide the path to the file.
 
 2. **Run the Script**
