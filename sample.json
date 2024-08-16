@@ -1,0 +1,21 @@
+{
+    "name": "John",
+    "age": 30,
+    "children": [
+        {
+            "name": "Anna",
+            "age": 10,
+            "hobbies": ["reading", "painting"]
+        },
+        {
+            "name": "Tom",
+            "age": 5,
+            "hobbies": ["games", {"outdoor": "football", "indoor": "chess"}]
+        }
+    ],
+    "address": {
+        "street": "123 Maple Street",
+        "city": "Wonderland",
+        "postal": "12345"
+    }
+}
