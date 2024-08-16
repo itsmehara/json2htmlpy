@@ -1,4 +1,5 @@
 import json
+import sys
 
 def json_to_html_table(data):
     if isinstance(data, dict):
@@ -51,28 +52,24 @@ def convert_json_to_html(json_input, output_file):
     with open(output_file, 'w') as file:
         file.write(html_content)
 
-# Sample JSON data (3 levels deep with dicts and lists)
-sample_json = {
-    "name": "John",
-    "age": 30,
-    "children": [
-        {
-            "name": "Anna",
-            "age": 10,
-            "hobbies": ["reading", "painting"]
-        },
-        {
-            "name": "Tom",
-            "age": 5,
-            "hobbies": ["games", {"outdoor": "football", "indoor": "chess"}]
-        }
-    ],
-    "address": {
-        "street": "123 Maple Street",
-        "city": "Wonderland",
-        "postal": "12345"
-    }
-}
+if __name__ == "__main__":
+    # Check if the correct number of arguments are passed
+    if len(sys.argv) != 3:
+        print("Usage: python json_to_html.py <input_json_file> <output_html_file>")
+        sys.exit(1)
 
-# Convert the sample JSON to HTML and save it to a file
-convert_json_to_html(sample_json, 'output.html')
+    # Get the input and output file paths from command line arguments
+    input_json_file = sys.argv[1]
+    output_html_file = sys.argv[2]
+
+    # Read the JSON data from the input file
+    try:
+        with open(input_json_file, 'r') as file:
+            json_data = json.load(file)
+    except Exception as e:
+        print(f"Error reading JSON file: {e}")
+        sys.exit(1)
+
+    # Convert JSON to HTML and save the output
+    convert_json_to_html(json_data, output_html_file)
+    print(f"HTML table successfully generated and saved to {output_html_file}")
