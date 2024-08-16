@@ -12,10 +12,10 @@ This Python project provides a script to convert a nested JSON structure into an
 
 ```
 .
-├── json_to_html.py       # Main script to convert JSON to HTML
-├── sample_json.json      # Sample JSON file for testing
-├── output.html           # Example of the generated HTML file
-└── README.md             # Documentation file
+├── jsontohtml.py    # Main script to convert JSON to HTML
+├── sample.json      # Sample JSON file for testing
+├── output.html      # Example of the generated HTML file
+└── README.md        # Documentation file
 ```
 
 ## Getting Started
