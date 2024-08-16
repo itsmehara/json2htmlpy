@@ -35,6 +35,12 @@ def convert_json_to_html(json_input, output_file):
     html_content = f'''
     <html>
     <head><title>JSON to HTML</title></head>
+    <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    </style>    
     <body>
     {html_table}
     </body>
