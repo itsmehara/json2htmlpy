@@ -29,8 +29,8 @@ This Python project provides a script to convert a nested JSON structure into an
 
 1. **Clone the Repository**
    ```sh
-   git clone https://github.com/yourusername/json-to-html-table.git
-   cd json-to-html-table
+   git clone https://github.com/itsmehara/json2htmlpy.git
+   cd json2htmlpy
    ```
 
 2. **Prepare the Environment**
