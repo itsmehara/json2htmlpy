@@ -49,7 +49,7 @@ This Python project provides a script to convert a nested JSON structure into an
 2. **Run the Script**
    - Execute the Python script with your JSON data and desired output HTML file name.
    ```sh
-   python json_to_html.py sample_json.json output.html
+   python jsontohtml.py sample_json.json output.html
    ```
 
    - You can also modify the script directly by changing the `sample_json` variable to your JSON structure.
