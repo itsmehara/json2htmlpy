@@ -11,4 +11,4 @@ from .jsontohtml import convert_json_to_html
 
 # You can add additional imports or helper functions here if needed
 
-__version__ = '0.1.0'
+__version__ = '1.0.3'
