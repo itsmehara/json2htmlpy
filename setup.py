@@ -17,4 +17,14 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
+    install_requires=[
+        "beautifulsoup4",  # Add your dependencies here
+        "bs4",
+        "build"
+    ],
+    entry_points={
+        "console_scripts": [
+            "json2html=json2htmlpy.jsontohtml:main",  # Replace with your command and function
+        ],
+    },
 )
