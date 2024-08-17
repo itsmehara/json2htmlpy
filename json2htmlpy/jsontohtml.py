@@ -4,7 +4,16 @@ from bs4 import BeautifulSoup
 
 
 def beautify_html(html_content):
-    # Parse the HTML content using BeautifulSoup
+    """
+    Parse the HTML content using BeautifulSoup
+    Beautify HTML content by adding indentation and new lines.
+
+    Args:
+        html_content (str): The raw HTML content to be beautified.
+
+    Returns:
+        str: The beautified HTML content.
+    """
     soup = BeautifulSoup(html_content, 'html.parser')
 
     # Use the prettify method to beautify and indent the HTML content
@@ -14,6 +23,15 @@ def beautify_html(html_content):
 
 
 def json_to_html_table(data):
+    """
+    Convert JSON data to an HTML table format.
+
+    Args:
+        data (dict or list): The JSON data to be converted. Can be a dictionary or a list of dictionaries.
+
+    Returns:
+        str: The HTML table as a string.
+    """
     if isinstance(data, dict):
         # Start a new table for a dictionary
         html = '<table border="1">'
@@ -43,7 +61,17 @@ def json_to_html_table(data):
 
 
 def convert_json_to_html(json_input, output_file):
-    # Convert JSON data to an HTML table
+    """
+    Convert JSON data to an HTML table
+    Convert JSON input from a file to an HTML file.
+
+    Args:
+        json_input (str): Path to the input JSON file.
+        output_file (str): Path where the output HTML file will be saved.
+
+    Returns:
+        None
+    """
     html_table = json_to_html_table(json_input)
 
     # Add the CSS for styling the table
