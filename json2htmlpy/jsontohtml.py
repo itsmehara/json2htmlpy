@@ -1,5 +1,16 @@
 import json
 import sys
+from bs4 import BeautifulSoup
+
+
+def beautify_html(html_content):
+    # Parse the HTML content using BeautifulSoup
+    soup = BeautifulSoup(html_content, 'html.parser')
+
+    # Use the prettify method to beautify and indent the HTML content
+    beautified_html = soup.prettify()
+
+    return beautified_html
 
 
 def json_to_html_table(data):
@@ -27,6 +38,7 @@ def json_to_html_table(data):
     else:
         # Base case: if it's not a list or dict, return as plain text
         html = str(data)
+
     return html
 
 
@@ -56,9 +68,11 @@ def convert_json_to_html(json_input, output_file):
     </html>
     '''
 
+    beautified = beautify_html(html_content)
+
     # Write to an HTML file
     with open(output_file, 'w') as file:
-        file.write(html_content)
+        file.write(beautified)
 
 
 if __name__ == "__main__":
