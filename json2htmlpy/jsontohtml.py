@@ -1,3 +1,6 @@
+"""
+json2htmlpy: A utility by Haranadh to convert JSON data into HTML tables.
+"""
 import json
 import sys
 from bs4 import BeautifulSoup
@@ -27,7 +30,7 @@ def json_to_html_table(data):
     Convert JSON data to an HTML table format.
 
     Args:
-        data (dict or list): The JSON data to be converted. Can be a dictionary or a list of dictionaries.
+        data (dict or list): The JSON data to be converted. Can be a dict or a list of dicts.
 
     Returns:
         str: The HTML table as a string.
@@ -99,7 +102,7 @@ def convert_json_to_html(json_input, output_file):
     beautified = beautify_html(html_content)
 
     # Write to an HTML file
-    with open(output_file, 'w') as file:
+    with open(output_file, 'w', encoding='utf-8') as file:
         file.write(beautified)
 
 
@@ -115,7 +118,7 @@ if __name__ == "__main__":
 
     # Read the JSON data from the input file
     try:
-        with open(input_json_file, 'r') as file:
+        with open(input_json_file, 'r', encoding='utf-8') as file:
             json_data = json.load(file)
     except Exception as e:
         print(f"Error reading JSON file: {e}")
