@@ -107,12 +107,13 @@ def convert_json_to_html(json_input, output_file):
 
 
 if __name__ == "__main__":
+    json_data = {}
     # Check if the correct number of arguments are passed
     if len(sys.argv) != 3:
         print("Usage: python jsontohtml.py <input_json_file> <output_html_file>")
         sys.exit(1)
 
-    # Get the input and output file paths from command line arguments
+    # Get the input and output_file paths from command line arguments
     input_json_file = sys.argv[1]
     output_html_file = sys.argv[2]
 
