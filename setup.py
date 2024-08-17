@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="json2htmlpy",  # Package name
-    version="1.0.0",  # Version number
+    version="1.0.1",  # Version number
     description="A simple script to convert JSON to HTML tables.",  # Short description
     long_description=open('README.md').read(),  # Long description from README
     long_description_content_type="text/markdown",  # Type of long description
