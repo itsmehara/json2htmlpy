@@ -123,10 +123,9 @@ if __name__ == "__main__":
             json_data = json.load(file)
     except FileNotFoundError as e:
         print(f"File not found.: {e}")
+        sys.exit(1)
     except IOError as e:
         print(f"Error reading or writing the file.: {e}")
-    except Exception as e:
-        print(f"Error reading JSON file: {e}")
         sys.exit(1)
 
     # Convert JSON to HTML and save the output
