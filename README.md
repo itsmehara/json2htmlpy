@@ -103,7 +103,45 @@ Here is a sample JSON structure and the corresponding HTML output:
 
 You can customize the script to adjust the appearance of the HTML table, including adding CSS styles, modifying table attributes, or extending the logic to handle more specific cases.
 
-### Contributing
+----
+
+## Building and Installing
+
+To build and install this package, follow these steps:
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/itsmehara/json2htmlpy.git
+   cd json2htmlpy
+   ```
+
+2. **Install Build Tools**  If you don't have the `build` package installed, you can add it with:
+   ```bash
+   pip install build
+   ```
+
+3. **Build the Package** Create distribution files (source and wheel):
+   ```bash
+   python -m build
+   ```
+   This will generate `.tar.gz` and `.whl` files in the `dist` directory.
+
+4. **Install the Package** You can install the package locally using `pip`:
+   ```bash
+   pip install dist/json2htmlpy-0.1.0-py3-none-any.whl
+   ```
+
+   Alternatively, install in editable mode for development:
+
+   ```bash
+   pip install -e .
+   ```
+
+   This allows changes to the code to be immediately reflected without reinstalling.
+   
+----
+
+## Contributing
 
 Contributions are welcome! If you have suggestions or improvements, please fork the repository and create a pull request.
 
@@ -113,11 +151,13 @@ Contributions are welcome! If you have suggestions or improvements, please fork 
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+----
+
 ### License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-### Contact
+# Contact
 
 For any questions or issues, feel free to open an issue on the GitHub repository or contact me directly at [hara2help@gmail.com](mailto:hara2help@gmail.com).
 
