@@ -107,7 +107,7 @@ def convert_json_to_html(json_input, output_file):
 
 
 if __name__ == "__main__":
-    json_data = dict()
+    json_data = {}
     # Check if the correct number of arguments are passed
     if len(sys.argv) != 3:
         print("Usage: python jsontohtml.py <input_json_file> <output_html_file>")
