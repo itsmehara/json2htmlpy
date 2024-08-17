@@ -18,6 +18,7 @@ json2htmlpy/                # Root of the repository
 ├── setup.py                # Setup script for packaging
 ├── README.md               # Project’s README
 ├── LICENSE                 # License for the package
+├── requirements.txt
 ├── pyproject.toml
 └── .github/
     └── workflows/
