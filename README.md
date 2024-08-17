@@ -55,7 +55,7 @@ json2htmlpy/                # Root of the repository
 2. **Run the Script**
    - Execute the Python script with your JSON data and desired output HTML file name.
    ```sh
-   python jsontohtml.py sample_json.json output.html
+   python json2htmlpy/jsontohtml.py sample_json.json output.html
    ```
 
    - You can also modify the script directly by changing the `sample_json` variable to your JSON structure.
