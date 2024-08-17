@@ -102,8 +102,8 @@ def convert_json_to_html(json_input, output_file):
     beautified = beautify_html(html_content)
 
     # Write to an HTML file
-    with open(output_file, 'w', encoding='utf-8') as file:
-        file.write(beautified)
+    with open(output_file, 'w', encoding='utf-8') as html_file:
+        html_file.write(beautified)
 
 
 if __name__ == "__main__":
@@ -119,8 +119,8 @@ if __name__ == "__main__":
 
     # Read the JSON data from the input file
     try:
-        with open(input_json_file, 'r', encoding='utf-8') as file:
-            json_data = json.load(file)
+        with open(input_json_file, 'r', encoding='utf-8') as json_fp:
+            json_data = json.load(json_fp)
     except FileNotFoundError as e:
         print(f"File not found.: {e}")
         sys.exit(1)
