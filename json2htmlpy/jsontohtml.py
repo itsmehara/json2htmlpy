@@ -121,6 +121,10 @@ if __name__ == "__main__":
     try:
         with open(input_json_file, 'r', encoding='utf-8') as file:
             json_data = json.load(file)
+    except FileNotFoundError as e:
+        print(f"File not found.: {e}")
+    except IOError as e:
+        print(f"Error reading or writing the file.: {e}")
     except Exception as e:
         print(f"Error reading JSON file: {e}")
         sys.exit(1)
