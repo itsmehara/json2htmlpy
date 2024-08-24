@@ -1,6 +1,5 @@
 """
 Setup configuration for the json2htmlpy package.
-
 This module uses setuptools to package and distribute the json2htmlpy project.
 """
 from setuptools import setup, find_packages
